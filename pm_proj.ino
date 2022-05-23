@@ -114,8 +114,6 @@ void setup()
   digitalWrite(latchPinLine, LOW);
   shiftOut(dataPinLine, clockPinLine, MSBFIRST, 1L << playerLine);
   digitalWrite(latchPinLine, HIGH);
-  
-  Serial.begin(9600);
 
   attachInterrupt(digitalPinToInterrupt(buttonPinLeft), left, FALLING);
   attachInterrupt(digitalPinToInterrupt(buttonPinRight), right, FALLING);
